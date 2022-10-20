@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+body{
+font-size: 1.2rem;
+font-family:'Anton', sans-serif ;
+text-align: center;
+min-height: 100%;
+
+}
+
+.grid-container > * {
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-bar{
+    grid-area: nav-bar;
+    background-color: black;
+    padding: 10px;  
+    text-align: right; 
+    color:beige;
+   
+    
+}
+.header{
+    grid-area: header;
+    font-size: 50px;
+    color:rgb(226, 142, 31);
+    background-color: aqua;     
+}
+.transformacion{
+    overflow: hidden;
+    height: 70px;
+
+}
+span{
+    display: flex;
+    height: 100%;
+    padding-left: 7px;
+    animation:cambiar 8s infinite;
+
+}
+@keyframes cambiar {
+    0%{transform:translateY(-112%)}
+    15%{transform:translateY(-100%)}
+    25%{transform:translateY(-212%)}
+    35%{transform:translateY(-200%)}
+    45%{transform:translateY(-312%)}
+    55%{transform:translateY(-300%)}
+    65%{transform:translateY(-412%)}
+    75%{transform:translateY(-400%)}
+    85%{transform:translateY(-512%)}
+    100%{transform:translateY(-500%)}
+}
+.aside{
+    grid-area: aside;
+    background-image: url("motivacion.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.main{
+    grid-area: main;
+    background-image: url("box4.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.footer{
+    grid-area: footer;
+    background-image:url("palabracrosfit.jpg") ;  
+    color:beige
+}
+
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        "nav-bar"
+        "header"
+        "aside"
+        "main"
+        "footer"
+        ;
+}
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2;
+}
+.item3{
+    grid-area: item3;
+}
+.flex-container{
+    display: grid;
+    gap: 10px;
+    grid-template: 50% 50% / 50% 50%;
+    grid-template-areas: 
+        "item1 item2" 
+        ".  item3" 
+   
+; 
+}
+@media (min-width: 600px){
+    .grid-container{
+        display:grid;
+        grid-template: 50px 100px auto 100px / 300px auto ;
+        grid-template-areas: 
+            "nav-bar nav-bar" 
+            "header  header" 
+            "aside   main" 
+            "footer  footer" 
+        ;
+    }
+}
+
+@media (min-width: 900px){
+    .nav-bar {
+        background-color: rgba(177, 190, 190, 0.678);
+    }
+    .grid-container{
+        display:grid;
+        grid-template: 100px auto 100px / 200px auto 300px;
+        grid-template-areas: 
+            "header  header nav-bar " 
+            "main main  aside" 
+            "footer  footer footer" 
+        ;
+    
+    }
+}
+h3{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:antiquewhite
+}
+h4{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    color:whitesmoke;
+    text-decoration: underline;
+}
+
+p{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    color:whitesmoke;
+}
+.container-contacto{
+    display:flex;
+    min-height: 70px;
+    padding: 30px;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    
+}
+
+.enviar{
+    border-radius: 50px;
+    height: 50px;
+}
+
+.input{
+    border-radius: 50px;
+    height: 25px;
+    width: auto;
+    padding-left: 10px;
+
+}
+.enviar:hover{
+    background-color: black;;
+    color:#fff;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .container-contacto{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(mancuerna1.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        letter-spacing: 2px;
+        padding: 50px;
+        height: 100%;
+
+    }
+    .formulario{
+        font-size: 20px;
+        opacity: 0.75;
+        letter-spacing: 6px;
+        color:white;
+        
+    }
+    
+
+}
+    
+@media (min-width: 768px) {
+    .container-contacto{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(crosfit1\ -\ copia\ \(2\).jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        letter-spacing: 8px;
+        padding: 50px;
+        }
+        .formulario{
+            font-size: 20px;
+            opacity: 0.75;
+            letter-spacing: 6px;
+            color:white;
+    }
+}
